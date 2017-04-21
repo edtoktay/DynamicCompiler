@@ -10,7 +10,7 @@ String source = "package org.edtoktay.gen;\n" +
        "public class GeneratedClass implements IntefaceEx {\n" +
        "  @Override\n"
        "  public com.somepackage.SomeClass GeneratedClass(com.somepackage.AnotherClass arg0){\n " +
-       "    System.out.println("Hello World!");\n" +
+       "    System.out.println(\"Hello World!\");\n" +
        "  }\n" + 
        "}";
 Class<IntefaceEx> clazz = compiler.compile("org.edtoktay.gen.GeneratedClass", source, errs, new Class<?>[] { IntefaceEx.class });
