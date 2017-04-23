@@ -1,5 +1,7 @@
 # DynamicCompiler
-Dynamic Runtime Compiler Works with spring-boot Project
+Dynamic Runtime Compiler Works with spring-boot Project in live environment both Linux and Windows.
+
+Traverse through classpath jars and include classes to compilation classpath. This is an extension for D. Biesack's CharSequenceCompiler Code in order to make compiler work in the live environments. 
 
 # Usage
 
