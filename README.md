@@ -4,7 +4,29 @@ Dynamic Runtime Compiler Works with spring-boot Project in live environment both
 Traverse through classpath jars and include classes to compilation classpath. This is an extension for D. Biesack's CharSequenceCompiler Code in order to make compiler work in the live environments. 
 
 # Usage
-
+In pom.xml
+  ```xml
+  <repositories>
+		<repository>
+			<id>Java-api</id>
+			<url>https://packagecloud.io/edtoktay/Java-apis/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+  ```
+  and 
+  ```xml
+  <dependency>
+       <groupId>org.edtoktay</groupId>
+       <artifactId>DynamicCompiler</artifactId>
+       <version>0.0.1</version>
+  </dependency>
+  ```
 ```java
 DiagnosticCollector<JavaFileObject> errs = new DiagnosticCollector<JavaFileObject>();
 DynamicCompiler<IntefaceEx> compiler = new DynamicCompiler<IntefaceEx>(getClass().getClassLoader(), Arrays.asList(new String[] { "-target", "1.7" }));
